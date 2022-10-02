@@ -24,6 +24,8 @@
   },
   "packageManager": "yarn@3.2.3",
   "dependencies": {
+    "@headlessui/react": "^1.7.3",
+    "@heroicons/react": "^2.0.11",
     "headlessui": "^0.0.0",
     "heroicons": "^2.0.11"
   }

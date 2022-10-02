@@ -1,17 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingCartIcon, UserIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -90,6 +76,7 @@ const GeneralLayout = ({ children }) => {
   const [open, setOpen] = useState(false)
 
   return (
+    <>
     <div className="bg-white">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
@@ -543,6 +530,8 @@ const GeneralLayout = ({ children }) => {
         </nav>
       </header>
     </div>
+    {children}
+    </>
   )
 }
 

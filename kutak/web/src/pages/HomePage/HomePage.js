@@ -5,7 +5,6 @@ import ProductList from 'src/components/ProductList/ProductList'
 const HomePage = () => {
   return (
     <>
-      <MetaTags title="Home" description="Home page" />
       <ProductList></ProductList>
     </>
   )
