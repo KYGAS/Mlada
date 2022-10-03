@@ -4,6 +4,8 @@ export const schema = gql`
     name: String!
     description: String!
     price: Float!
+    sizes: [Size]!
+    tags: [Tag]!
   }
 
   type Query {

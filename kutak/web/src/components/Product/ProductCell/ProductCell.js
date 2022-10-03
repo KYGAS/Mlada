@@ -7,6 +7,12 @@ export const QUERY = gql`
       name
       description
       price
+      sizes{
+        velicina
+      }
+      breadcrumbs:tags{
+        name
+      }
     }
   }
 `

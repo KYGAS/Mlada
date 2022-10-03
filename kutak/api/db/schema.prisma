@@ -12,8 +12,26 @@ generator client {
 // to create migrations for them and apply to your dev DB.
 // TODO: Please remove the following example:
 model Product {
-  id    Int     @id @default(autoincrement())
-  name String
-  description String 
-  price Float
+  id          Int    @id @default(autoincrement())
+  name        String
+  description String
+  price       Float
+  sizes       Size[]
+  tags        Tag[]
+}
+
+model Size {
+  id       Int @id @default(autoincrement())
+  velicina Int
+
+  Product   Product? @relation(fields: [productId], references: [id])
+  productId Int?
+}
+
+model Tag {
+  id       Int @id @default(autoincrement())
+  name     String @unique
+
+  Product   Product? @relation(fields: [productId], references: [id])
+  productId Int?
 }

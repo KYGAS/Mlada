@@ -28,3 +28,12 @@ export const deleteProduct = ({ id }) => {
     where: { id },
   })
 }
+
+export const Product = {
+  sizes: (_obj, { root }) => {
+    return db.product.findUnique({ where: { id: root?.id } }).sizes()
+  },
+  tags: (_obj, { root }) => {
+    return db.product.findUnique({ where: { id: root?.id } }).tags()
+  },
+}

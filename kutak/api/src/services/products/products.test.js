@@ -30,13 +30,13 @@ describe('products', () => {
       input: {
         name: 'String',
         description: 'String',
-        price: 4001348.2576671834,
+        price: 4947792.137258078,
       },
     })
 
     expect(result.name).toEqual('String')
     expect(result.description).toEqual('String')
-    expect(result.price).toEqual(4001348.2576671834)
+    expect(result.price).toEqual(4947792.137258078)
   })
 
   scenario('updates a product', async (scenario) => {
